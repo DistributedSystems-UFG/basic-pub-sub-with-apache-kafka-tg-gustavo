@@ -4,9 +4,9 @@ import sys
 
 consumer = KafkaConsumer(bootstrap_servers=[BROKER_ADDR + ':' + BROKER_PORT])
 try:
-  topic = sys.argv[1]
+  topic = "Fishing"
 except:
-  print ('Usage: python3 consumer <topic_name>')
+  print ('Usage: python3 consumer Fishing')
   exit(1)
   
 consumer.subscribe([topic])
